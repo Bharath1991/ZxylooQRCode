@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Redirect</title>
+    <script>
+        // Detect user's device
+        const userAgent = navigator.userAgent.toLowerCase();
+        if (userAgent.includes("android")) {
+            // Redirect Android users to Google Play Store
+            window.location.href = "https://play.google.com/store/apps/details?id=com.raghavendra22229.zxyloo";
+        } else if (userAgent.includes("iphone") || userAgent.includes("ipad") || userAgent.includes("ipod")) {
+            // Redirect iOS users to Apple App Store
+            window.location.href = "https://apps.apple.com/in/app/zxyloo-online-food-delivery/id6738959557";
+        } else {
+            // Redirect other users to a fallback webpage
+            window.location.href = "https://zxyloo.com/";
+        }
+    </script>
+</head>
+<body>
+    <p>Redirecting you to the appropriate location...</p>
+</body>
+</html>
